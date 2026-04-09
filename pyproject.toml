@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "blctl"
+version = "0.1.0"
+description = "Command-line interface for the BreachLock platform, distributed via pip."
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.scripts]
+blctl = "blctl.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry-core.masonry.api"
