@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "blctl"
+name = "breachlock-blctl"
 version = "0.1.0"
 description = "Command-line interface for BreachLock AEV, distributed via pip."
 authors = ["Saul Johnson <saul.j@breachlock.com>"]
