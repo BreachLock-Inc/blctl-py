@@ -12,7 +12,7 @@ Command-line interface for [BreachLock AEV](https://www.breachlock.com/products/
 ## Installation
 
 ```bash
-pip install blctl
+pip install breachlock-blctl
 ```
 
 ## Configuration
@@ -195,7 +195,7 @@ blctl engage \
 breachlock-scan:
   stage: test
   script:
-    - pip install blctl
+    - pip install breachlock-blctl
     - |
       blctl engage \
         --type web \

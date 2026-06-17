@@ -12,7 +12,7 @@ from blctl.commands import engage
 
 
 @click.group()
-@click.version_option(package_name="blctl")
+@click.version_option(package_name="breachlock-blctl")
 def cli() -> None:
     """Provides the `blctl` command-line interface for BreachLock AEV."""
 
