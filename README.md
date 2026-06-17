@@ -2,7 +2,7 @@
 
 Command-line interface for [BreachLock AEV](https://www.breachlock.com/products/adversarial-exposure-validation/), designed for use in CI/CD pipelines. Start network and web application pentest engagements against your infrastructure directly from the terminal or your pipeline scripts.
 
-![Logo](logo.svg)
+![Logo](logo.png)
 
 ## Requirements
 
