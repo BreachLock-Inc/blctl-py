@@ -205,3 +205,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Test script
+test.sh
+
+# Factoring guides
+backend-factoring-guide.md
