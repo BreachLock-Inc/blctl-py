@@ -29,6 +29,7 @@ def build_common_engagement_fields(
     included_cves: list[str],
     notify_urls: list[NotifyUrl],
     threat_actor_assessment_ids: list[str],
+    shield_slug: str | None,
 ) -> CommonEngagementFields:
     """Bundles shared engagement fields into a `CommonEngagementFields` model.
 
@@ -50,6 +51,7 @@ def build_common_engagement_fields(
         `included_cves` (`list[str]`): CVEs to include.
         `notify_urls` (`list[NotifyUrl]`): Webhook targets.
         `threat_actor_assessment_ids` (`list[str]`): Threat actor assessment IDs.
+        `shield_slug` (`str | None`): Optional CI/CD shield slug for badge rendering.
     Returns:
         `CommonEngagementFields`: The bundled common engagement fields.
     """
@@ -71,6 +73,7 @@ def build_common_engagement_fields(
         included_cves=included_cves,
         notify_urls=notify_urls,
         threat_actor_assessment_ids=threat_actor_assessment_ids,
+        shield_slug=shield_slug,
     )
 
 

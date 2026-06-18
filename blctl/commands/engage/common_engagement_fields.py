@@ -63,3 +63,6 @@ class CommonEngagementFields(BaseModel):
 
     threat_actor_assessment_ids: list[str] = Field(default_factory=list)
     """Threat actor assessment IDs to associate with the engagement."""
+
+    shield_slug: str | None = None
+    """CI/CD shield slug for badge rendering at /api/public/v1/shield/{shieldSlug}."""

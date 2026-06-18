@@ -280,6 +280,17 @@ from blctl.commands.engage.web_engagements import (
     ),
 )
 @click.option(
+    "--shield-slug",
+    "shield_slug",
+    type=str,
+    default=None,
+    help=(
+        "CI/CD shield slug for this engagement. When set, the engagement's "
+        "results can be displayed via the shield badge at "
+        "/api/public/v1/shield/{shieldSlug}."
+    ),
+)
+@click.option(
     "--threat-actor-assessment-id",
     "threat_actor_assessment_ids",
     type=str,
@@ -322,6 +333,7 @@ def engage(
     included_cves: tuple[str, ...],
     notify_url_specifications: tuple[str, ...],
     threat_actor_assessment_ids: tuple[str, ...],
+    shield_slug: str | None,
 ) -> None:
     """Starts a pentest engagement against BreachLock AEV."""
     is_web = engagement_type.lower() == "web"
@@ -370,6 +382,7 @@ def engage(
         included_cves=list(included_cves),
         notify_urls=notify_urls,
         threat_actor_assessment_ids=list(threat_actor_assessment_ids),
+        shield_slug=shield_slug,
     )
 
     with ApiClient(base_url=api_url, api_key=api_key) as client:
